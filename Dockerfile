@@ -1,6 +1,9 @@
-FROM ubuntu:14.04
+FROM daocloud.io/ubuntu:14.04
 MAINTAINER Eric Zhang <my101du@gmail.com>
  
+# use china apt-get source
+COPY ./sources_cn.list /etc/apt/sources.list
+
 
 # update system
 RUN apt-get update
